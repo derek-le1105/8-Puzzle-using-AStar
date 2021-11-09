@@ -1,3 +1,6 @@
+#url to code: https://github.com/derek-le1105/8-Puzzle-using-AStar
+# Derek Le, dle040, 11/8/2021, CS 170
+
 from puzzle import Puzzle
 import search
 from stack import Stack
@@ -29,14 +32,14 @@ def displayPuzzle(puzzle):
         print(puzzle[i])
 
 def getAlg():
-    algDec = int(input("Select which algorithm you want to use. '1' for Uniform Cost Search, '2' for the Misplaced Tile Heuristic, '3' for the Manhatten Distance Heuristic.: "))
+    algDec = int(input("Select which algorithm you want to use. '1' for Uniform Cost Search, '2' for the Misplaced Tile Heuristic, '3' for the Manhattan Distance Heuristic.: "))
 
     if algDec == 1:
         return search.uniformedCostSearch
     elif algDec == 2:
         return search.misplacedTile
     elif algDec == 3:
-        return search.manhattenDistance
+        return search.manhattanDistance
     else:
         print("not valid input")
     return
